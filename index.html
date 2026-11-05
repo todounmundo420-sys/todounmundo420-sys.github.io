@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mil Vidas</title>
+<meta name="description" content="Simulador de vida por texto. Gratis, sin anuncios y sin compras.">
+<meta name="theme-color" content="#23308f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="icono-192.png">
+<link rel="preload" href="kalam-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // Aplica el tema antes de pintar para que no parpadee.
+  (function () {
+    var t = 'auto';
+    try { t = (JSON.parse(localStorage.getItem('milvidas.ajustes')) || {}).tema || 'auto'; } catch (e) {}
+    if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'neon' : 'vivo';
+    document.documentElement.setAttribute('data-tema', t);
+  })();
+</script>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div id="app"></div>
+<dialog id="hoja" aria-labelledby="hoja-titulo"></dialog>
+<dialog id="modal" aria-labelledby="modal-titulo"></dialog>
+<div id="avisos" role="status" aria-live="polite"></div>
+<div id="confeti" aria-hidden="true"></div>
+<noscript>Mil Vidas necesita JavaScript para funcionar.</noscript>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Mil Vidas",
+  "short_name": "Mil Vidas",
+  "description": "Simulador de vida por texto. Gratis, sin anuncios y sin compras.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#23308f",
+  "theme_color": "#23308f",
+  "icons": [
+    { "src": "icono-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icono-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icono-mask.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

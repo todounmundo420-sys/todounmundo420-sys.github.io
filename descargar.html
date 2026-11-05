@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Mil Vidas</title>
+<meta name="description" content="Vive mil vidas en tu celular. Gratis, sin anuncios y sin compras.">
+<meta name="theme-color" content="#23308f">
+<link rel="icon" href="icono-192.png">
+<style>
+@font-face { font-family: Kalam; src: url(kalam-latin-700-normal.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: Nunito; src: url(nunito-latin-400-normal.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Nunito; src: url(nunito-latin-800-normal.woff2) format('woff2'); font-weight: 800; font-display: swap; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #23308f; color: #fff; font: 400 17px/1.45 Nunito, system-ui, sans-serif; }
+main { max-width: 480px; margin: 0 auto; padding: 32px 18px 28px 40px; position: relative; min-height: 100vh; display: flex; flex-direction: column; gap: 12px; }
+main::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 24px; background: #182169; border-right: 2px dashed rgba(255, 255, 255, .35); }
+.etiqueta { background: #fffef8; color: #1d1442; border-radius: 8px; padding: 18px; transform: rotate(-1deg); margin-bottom: 10px; }
+h1 { font: 700 clamp(52px, 16vw, 72px)/1 Kalam, cursive; margin: 0 0 12px; }
+h1 span { background: linear-gradient(transparent 58%, #ffdc33 58% 90%, transparent 90%); padding: 0 6px; }
+.etiqueta p { margin: 0; color: #4a4468; }
+a.btn { display: block; text-align: center; text-decoration: none; padding: 14px; border-radius: 12px; font-weight: 800; background: #fff; color: #1d1442; }
+a.btn.fuerte { background: #ffdc33; box-shadow: 0 3px 0 rgba(0, 0, 0, .35); font-size: 19px; }
+a:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+ol { margin: 10px 0 0; padding-left: 22px; } li { margin: 5px 0; }
+h2 { font-size: 18px; margin: 16px 0 0; }
+small { color: rgba(255, 255, 255, .8); } small a { color: #fff; }
+</style>
+</head>
+<body>
+<main>
+<div class="etiqueta"><h1><span>Mil Vidas</span></h1><p>Decide cada día de tu vida: estudia, monta tu negocio o vete por la calle. Tu familia sigue después de ti, si te lo ganas.</p></div>
+<a class="btn fuerte" id="apk" href="mil-vidas.apk" download>Descargar para Android</a>
+<a class="btn" href="index.html">Jugar en el navegador</a>
+<h2>Cómo instalarlo</h2>
+<ol>
+<li>Toca Descargar y abre el archivo cuando termine.</li>
+<li>Si tu celular lo pide, permite instalar desde este navegador.</li>
+<li>Toca Instalar y a vivir.</li>
+</ol>
+<small style="margin-top:auto">Gratis, sin anuncios y sin compras. Para mayores de 17 años. <a href="privacidad.html">Privacidad</a></small>
+</main>
+<script>
+fetch('mil-vidas.apk', { method: 'HEAD' }).then(function (r) { if (!r.ok) throw 0; }).catch(function () {
+  var b = document.getElementById('apk'); b.removeAttribute('href'); b.removeAttribute('download'); b.textContent = 'La app para Android llega muy pronto'; b.style.opacity = '.75';
+  document.querySelector('h2').style.display = 'none'; document.querySelector('ol').style.display = 'none';
+});
+</script>
+</body>
+</html>
